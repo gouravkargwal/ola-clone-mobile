@@ -1,0 +1,335 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: hsl(0,0%,96%);
+}
+.nav_bar{
+  display: flex;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 4px 2px gray;
+}
+.logo{
+  align-self: center;
+  height: 30px;
+  position: relative;
+  left:33%;
+}
+
+/* Hamburger Menu */
+.ham{
+  position: relative;
+  left: 0;
+  padding: 20px;
+}
+.bar{
+  height: 2px;
+  width: 25px;
+  background-color: black;
+}
+.bar::after,
+.bar::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+}
+.bar::before{
+  top: 12px;
+}
+.bar::after{
+  bottom: 12px;
+}
+.ham.close .bar::before{
+  top: 20px;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+}
+.ham.close .bar::after{
+  bottom:  20px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+.ham.close .bar{
+  background-color: transparent;
+}
+
+.sidebar{
+  max-width: 45%;
+  min-width: 45%;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  top: 52px;
+  z-index: 1;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.sidebar ul{
+  list-style: none;
+}
+.sidebar ul li a{
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.sidebar ul li a:hover{
+background-color: hsl(0,0%,88%);
+}
+.navtoggle{
+  transform: translateX(0);
+}
+.book{
+  margin-top: 12px;
+}
+.type-fares{
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+}
+.type-fares li a{
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  padding: 5px;
+}
+.type-fares li a:hover{
+  background-color: hsl(66,100%,44%);
+}
+.booking-form{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.booking-form h2, h4{
+  align-self: center;
+  margin-bottom: 5px;
+}
+input,select{
+  background-color: hsl(0,0%,88%);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 5px 0;
+}
+input[type=submit]{
+  background-color: hsl(66,100%,44%);
+}
+.car-occasion{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.car-occasion-info{
+  margin: 20px;
+  margin-bottom: 10px;
+}
+.car-card{
+  margin: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow:  0px 0px 2px 2px rgb(0 0 0 / 20%);
+}
+.background-image{
+  background-image: url(https://cms-web.olacabs.com/00000000356.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+}
+.two{
+  background-image:url(https://cms-web.olacabs.com/00000000357.jpg) ;
+}
+.three{
+  background-image: url(https://cms-web.olacabs.com/00000000380.jpg);
+}
+.car-occasion-logo{
+  position: relative;
+}
+.car-occasion-logo img{
+  width: 60px;
+  border: 2px solid hsl(66,100%,44%);
+  background-color: hsl(66,100%,44%);
+  border-radius: 100%;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+.car-card-info{
+  margin: 20px;
+}
+.car-card-info h4{
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.car-card-info p{
+  margin-bottom: 20px;
+  color: hsl(8,8%,47%);
+}
+.cab-features{
+  display: flex;
+  margin-bottom: 30px;
+}
+.cab-feature{
+  display: flex;
+  width: 100%;
+}
+.cab-feature-img{
+  margin-right: 4px;
+}
+.cab-feature-img img{
+  height: 32px;
+  width: 30px;
+}
+.cab-feature-info h6{
+  font-size: 15px;
+  font-weight: 100;
+  color: hsl(8,8%,47%);
+}
+.why-ola-reasons{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.why-ola-reason{
+  display: flex;
+  margin-bottom: 20px;
+}
+.why-ola-reason__img{
+  margin-right: 20px;
+  border-radius: 5px;
+  max-height: 110px;
+  max-width: 180px;
+}
+.why-ola-reason__info{
+  font-size: 18px;
+}
+.ola-app{
+  margin: 20px;
+}
+.ola-app__img{
+  width: 90%;
+  margin-bottom: 30px;
+}
+.ola-app__info{
+  font-size: 18px;
+}
+.ola-app__download{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.ola-app__download img{
+  height: 30px;
+}
+.ola-services{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 25%)
+}
+.ola-service{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.ola-service img{
+  margin-right: 10px;
+}
+.footer-section{
+  background-color: hsl(0,0%,22%);
+  color: white;
+}
+.footer-section__title{
+  padding: 50px;
+  text-align: center;
+}
+.outstation-cities{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.outstation-cities__title{
+  margin-bottom: 10px;
+}
+.outstation-cities__name{
+  display: flex;
+  flex-direction: column;
+}
+.outstation-cities__name ul{
+  list-style: none;
+  margin-bottom: 10px;
+}
+.outstation-cities__name ul caption{
+ font-size: 16px;
+}
+.outstation-cities__name ul li{
+  text-align: center;
+}
+.social-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.social-links__title{
+  padding: 20px;
+  font-size: 12px;
+}
+.social-links__img img{
+  padding: 20px;
+}
+.discover-ola{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.discover-ola__title{
+  margin: 20px;
+}
+.discover-ola__links ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.discover-ola__links ul li{
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.footer__img{
+  padding: 20px;
+}
+.footer__info ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__info ul li{
+  padding: 20px;
+}
+.copyrights{
+  padding: 20px;
+  margin-bottom: 20px;
+}
